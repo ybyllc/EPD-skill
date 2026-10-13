@@ -4,6 +4,16 @@
 
 基于 [EPD-nRF5](https://github.com/tsl0922/EPD-nRF5) 开源固件，通过 Python 调用本机 BLE 接口上传图片，无需厂商 APP。感谢原项目作者提供的固件与通信协议。
 
+## 效果展示
+
+### 实体屏幕
+
+![墨水屏显示效果](https://github.com/user-attachments/assets/f1e776fe-66bf-493a-aad8-69c6506e2810)
+
+### 网页编辑器
+
+![墨水屏网页编辑器](https://github.com/user-attachments/assets/75f07587-1837-4859-bb15-6da8319c1ec5)
+
 ## 功能与目录
 
 | 组件 | 用途 | 入口 |
@@ -92,16 +102,6 @@ python3 -m venv .epd-venv
 其他能够读取文件并执行 Python 的 AI，也可以按对应 `SKILL.md` 的说明调用。消息端 AI 可以负责接收和整理任务，显示端负责排版与上传；详见 [任务显示接口](epd-planner/examples/DISPLAY-INTERFACE.md)。
 
 网页导出的 `tasks` JSON 与脚本排版使用的 `rows` JSON 不同。保留网页版式时，请直接上传网页导出的 PNG，不要把 `tasks` JSON 交给 `render_card.py` 重新排版。
-
-## 效果展示
-
-### 实体屏幕
-
-![墨水屏显示效果](https://github.com/user-attachments/assets/f1e776fe-66bf-493a-aad8-69c6506e2810)
-
-### 网页编辑器
-
-![墨水屏网页编辑器](https://github.com/user-attachments/assets/75f07587-1837-4859-bb15-6da8319c1ec5)
 
 ## 致谢
 

@@ -1,0 +1,6 @@
+WenQuanYi Bitmap Song 000.990
+Source: https://github.com/tsl0922/EPD-nRF5/tree/master/tools/fonts
+Files: wenquanyi_9ptb.bdf, wenquanyi_12ptb.bdf
+The calendar uses these native 12px and 16px glyphs. This asset preserves their bitmap data; no scaled system-font substitution.
+Project license: https://github.com/tsl0922/EPD-nRF5/blob/master/LICENSE
+WenQuanYi project: http://wenq.org/

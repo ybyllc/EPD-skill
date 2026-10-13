@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>纸间 · 墨水屏工作台</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="#"><span class="brand-icon">▤</span> 纸间 <small>INK STUDIO</small></a><span class="local"><i></i> 本地工作台 · 内容保存在此浏览器</span><button id="reset" class="quiet">恢复当前示例 ↺</button></header>
+<main>
+<div class="intro"><div><div class="eyebrow">A LITTLE SPACE FOR WHAT MATTERS</div><h1>把今天，放在眼前。</h1><p>选一个版式，写下要做的事。先看像素，再点亮你的墨水屏。</p></div><div class="screen-tag"><span>你的桌面画布</span><strong>400 <b>×</b> 300</strong><small>4.2 英寸 / 黑 · 白 · 红</small></div></div>
+<div class="workspace">
+<aside class="editor"><div class="section-label"><span>01 / 面板版式</span><small>切换即载入示例</small></div><div id="templates" class="templates"></div>
+<div class="section-label divider"><span>02 / 显示内容</span><span id="task-count"></span></div>
+<label>面板标题<input id="title" maxlength="80"></label>
+<div class="field-pair"><label>日期 / 副标题<input id="subtitle" maxlength="100"></label><label>底部提示<input id="footer" maxlength="100"></label></div>
+<div class="task-heading"><span>任务</span><button id="add" class="quiet">＋ 添加任务</button></div><div id="tasks"></div>
+<div class="section-label divider"><span>03 / 字体与像素</span></div>
+<div class="field-pair"><label>字体<select id="font"><option value="bitmap">日历同源 · 点阵宋体</option><option value="sans">系统黑体</option><option value="serif">系统宋体</option></select></label><label>像素处理<select id="method"><option value="threshold">清晰阈值</option><option value="floyd">灰度抗锯齿 · 误差扩散</option><option value="bayer">灰度抗锯齿 · 有序抖动</option></select></label></div>
+<div class="field-pair"><label>正文字号 <output id="size-value"></output><input id="size" type="range" min="12" max="24" step="1"></label><label>墨色浓度 <output id="threshold-value"></output><input id="threshold" type="range" min="80" max="200" step="5"></label></div>
+<label class="check"><input id="red" type="checkbox"> 使用红色强调</label><p id="font-note" class="hint"></p>
+</aside>
+<section class="preview"><div class="preview-toolbar"><span><i class="live-dot"></i> 实时像素预览</span><div class="segmented"><button data-zoom="0">适宽</button><button data-zoom="1">1:1</button><button data-zoom="1.5" class="active">1.5×</button><button data-zoom="2">2×</button></div></div>
+<div class="stage"><div class="device" id="device"><div class="device-top"><span>hsc / DAILY COMPANION</span><span>●</span></div><canvas id="screen" width="400" height="300" aria-label="400乘300墨水屏预览"></canvas><div class="device-bottom"><span>电子纸 · E-PAPER</span><div class="device-led"></div></div></div></div>
+<div class="preview-caption"><span>像素按原样显示 · 放大不平滑</span><span id="ink-count"></span></div>
+<div id="warnings" role="status"></div>
+<div class="export-card"><div><h2>满意了，就带走这张画面。</h2><p>PNG 可交给 epd-control 上传；JSON 可继续编辑。</p></div><div class="export-actions"><button id="import" class="secondary">导入 JSON</button><button id="json" class="secondary">导出 JSON</button><button id="png" class="primary">导出图片 ↗</button></div></div>
+<div class="note"><span>⌁</span><p>这是像素与排版模拟，不模拟真实屏幕的残影、红色刷新速度或物理尺寸。网页不会连接或刷新设备。</p></div>
+</section>
+</div><footer>少一点噪音，多一点专注。<span>BUILT FOR YOUR E-PAPER</span></footer>
+</main><input type="file" id="file" accept="application/json,.json" hidden><div id="toast" role="status"></div>
+<script src="bitmap-fonts.js"></script><script src="app.js"></script>
+</body></html>

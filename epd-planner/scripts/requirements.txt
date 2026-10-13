@@ -1,0 +1,6 @@
+bleak==1.1.1
+Pillow==11.3.0
+pyobjc-core==11.1; sys_platform == "darwin"
+pyobjc-framework-Cocoa==11.1; sys_platform == "darwin"
+pyobjc-framework-CoreBluetooth==11.1; sys_platform == "darwin"
+pyobjc-framework-libdispatch==11.1; sys_platform == "darwin"

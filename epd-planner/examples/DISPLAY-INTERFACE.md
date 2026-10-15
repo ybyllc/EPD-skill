@@ -24,16 +24,16 @@
 只生成预览：
 
 ```sh
-"/Users/hsc/Documents/个人文件夹/墨水屏/.venv/bin/python" \
-  /Users/hsc/.codex/skills/epd-planner/scripts/render_card.py \
+"$PYTHON" \
+  "$SKILL_DIR/scripts/render_card.py" \
   task-template.json --output task-preview.png
 ```
 
 收到显示指令后上传：
 
 ```sh
-"/Users/hsc/Documents/个人文件夹/墨水屏/.venv/bin/python" \
-  /Users/hsc/.codex/skills/epd-planner/scripts/upload_epd.py \
+"$PYTHON" \
+  "$SKILL_DIR/scripts/upload_epd.py" \
   task-preview.png --name NRF_EPD_A571
 ```
 
